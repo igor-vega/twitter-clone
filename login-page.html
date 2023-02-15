@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter</title>
+    <link rel="stylesheet" href="/login.css">
+    <link rel="shortcut icon" href="/img/App-Twitter-icon.png" type="image/x-icon">
+	<script>
+		function validateForm() {
+			var username = document.forms["loginForm"]["username"].value;
+			var password = document.forms["loginForm"]["password"].value;
+			if (username == "" || password == "") {
+				alert("Please fill in both fields.");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Twitter</h1>
+	<form name="loginForm" onsubmit="return validateForm()">
+		<label for="username">Username:</label>
+		<input type="text" name="username"><br><br>
+		<label for="password">Password:</label>
+		<input type="password" name="password"><br><br>
+		<input type="submit" value="Log In">
+        <input type="submit" value="Sign Up">
+	</form>
+</body>
+</html>
